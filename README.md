@@ -18,6 +18,10 @@ This command will import all data from the `config` folder into the Voyager rela
 
 Made a mistake? Want to start again? Remove all exported data with `voyager:clean`.
 
+### `artisan voyager:importupdate`
+
+This command will import all data from the `config` folder into the Voyager related tables dropping the actual data and will make a backup folder in the config path.
+
 ## Commands explained
 
 This documentation is still to do. Try `artisan list` and `artisan voyager:export --help` for more information

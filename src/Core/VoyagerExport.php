@@ -50,7 +50,7 @@ class VoyagerExport {
 
     public static function saveBackupData($table, $data) {
         $driver = self::getDriver();
-        $folder = 'voyager_backup'.'/'.date('Y-m-d_h-m').'/';
+        $folder = 'voyager_backup'.'/'.date('Y-m-d_H-i').'/';
 
         $driver->put("$folder/$table.json", json_encode($data, JSON_PRETTY_PRINT));
     }

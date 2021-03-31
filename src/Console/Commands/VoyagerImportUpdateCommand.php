@@ -62,25 +62,25 @@ class VoyagerImportUpdateCommand extends Command
         $this->info("Starting Voyager config import ...");
 
         foreach ($this->tables as $table) {
-            $this->line("Importing {$table}...");
+
 
             // get configuration files created by `voyager:export`
             $conf_entries = $this->getConfigurationEntries($table);
 
             // check valid config entries
             if (empty($conf_entries)) {
-                $this->info("{$table} is empty");
+                $this->warn("{$table} is empty");
                 // stop importing configuration.
 
             }
 
             //Start the backup
             VoyagerExport::BackupforTable($table);
+            $this->info("Backup for {$table}...");
 
 
 
-
-
+            $this->line("Importing {$table}...");
             //Delete val in table
             DB::statement("SET foreign_key_checks=0");
             DB::table($table)->truncate();
