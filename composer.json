@@ -1,5 +1,5 @@
 {
-    "name": "madebybob/voyager-config",
+    "name": "scfgroup/voyager-config",
     "description": "Voyager configuration in config files",
     "type": "library",
     "license": "MIT",
@@ -11,19 +11,23 @@
         {
             "name": "Marlo Corridor",
             "email": "corridor.marlo@sofcode.xyz"
+        },
+        {
+            "name": "Scf Group",
+            "email": "svilupposoftware@scfgroup.it"
         }
     ],
     "minimum-stability": "dev",
     "require": {},
     "autoload": {
         "psr-4": {
-            "MadeByBob\\VoyagerConfig\\": "src"
+            "ScfGroup\\VoyagerConfig\\": "src"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "MadeByBob\\VoyagerConfig\\VoyagerConfigServiceProvider"
+                "ScfGroup\\VoyagerConfig\\VoyagerConfigServiceProvider"
             ]
         }
     }

@@ -12,14 +12,14 @@ class VoyagerImportCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'voyager:import';
+    protected $signature = 'voyager:import {--p|production : Import and make a clear after}';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Import all data from the config folder into the Voyager related tables.';
+    protected $description = 'Import all data from the config folder into the Voyager related tables updating them.';
 
     /**
      * The list of tables ordered for Foreign Key checks compliance.
@@ -78,7 +78,7 @@ class VoyagerImportCommand extends Command
 
         // Commit changes on DB. Errors will automatically reverted by uncommitted transaction
         DB::commit();
-
+        if(!$this->option('production')){ Artisan::call('voyager:clear');}
         $this->info("Importing Voyager configuration successful!");
     }
 
