@@ -1,6 +1,6 @@
 <?php
 
-
+namespace ScfGroup\VoyagerConfig\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\DB;

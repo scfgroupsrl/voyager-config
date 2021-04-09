@@ -7,6 +7,7 @@ use ScfGroup\VoyagerConfig\Console\Commands\VoyagerExportCommand;
 use ScfGroup\VoyagerConfig\Console\Commands\VoyagerClearCommand;
 use ScfGroup\VoyagerConfig\Console\Commands\VoyagerImportCommand;
 use ScfGroup\VoyagerConfig\Console\Commands\VoyagerImportUpdateCommand;
+use ScfGroup\VoyagerConfig\Console\Commands\VoyagerProductionCommand;
 use Illuminate\Support\Facades\Config;
 
 class VoyagerConfigServiceProvider extends ServiceProvider
@@ -38,7 +39,8 @@ class VoyagerConfigServiceProvider extends ServiceProvider
           VoyagerExportCommand::class,
           VoyagerClearCommand::class,
           VoyagerImportCommand::class,
-          VoyagerImportUpdateCommand::class
+          VoyagerImportUpdateCommand::class,
+          VoyagerProductionCommand::class
       ]);
     }
   }
