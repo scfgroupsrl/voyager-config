@@ -17,7 +17,7 @@
             "email": "svilupposoftware@scfgroup.it"
         }
     ],
-    "minimum-stability": "dev",
+    "minimum-stability": "alpha",
     "require": {},
     "autoload": {
         "psr-4": {
