@@ -1,12 +1,12 @@
 <?php
 
-namespace MadeByBob\VoyagerConfig;
+namespace ScfGroup\VoyagerConfig;
 
 use Illuminate\Support\ServiceProvider;
-use MadeByBob\VoyagerConfig\Console\Commands\VoyagerExportCommand;
-use MadeByBob\VoyagerConfig\Console\Commands\VoyagerClearCommand;
-use MadeByBob\VoyagerConfig\Console\Commands\VoyagerImportCommand;
-use MadeByBob\VoyagerConfig\Console\Commands\VoyagerImportUpdateCommand;
+use ScfGroup\VoyagerConfig\Console\Commands\VoyagerExportCommand;
+use ScfGroup\VoyagerConfig\Console\Commands\VoyagerClearCommand;
+use ScfGroup\VoyagerConfig\Console\Commands\VoyagerImportCommand;
+use ScfGroup\VoyagerConfig\Console\Commands\VoyagerImportUpdateCommand;
 use Illuminate\Support\Facades\Config;
 
 class VoyagerConfigServiceProvider extends ServiceProvider

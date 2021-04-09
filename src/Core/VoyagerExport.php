@@ -1,6 +1,6 @@
 <?php
 
-namespace MadeByBob\VoyagerConfig\Core;
+namespace ScfGroup\VoyagerConfig\Core;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;

@@ -1,6 +1,6 @@
 <?php
 
-namespace MadeByBob\VoyagerConfig;
+namespace ScfGroup\VoyagerConfig;
 
 use Illuminate\Support\Facades\Facade;
 

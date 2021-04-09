@@ -1,10 +1,10 @@
 <?php
 
-namespace MadeByBob\VoyagerConfig\Console\Commands;
+namespace ScfGroup\VoyagerConfig\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Config;
-use MadeByBob\VoyagerConfig\Core\VoyagerExport;
+use ScfGroup\VoyagerConfig\Core\VoyagerExport;
 
 class VoyagerExportCommand extends Command
 {

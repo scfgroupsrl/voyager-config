@@ -1,11 +1,11 @@
 <?php
 
-namespace MadeByBob\VoyagerConfig\Console\Commands;
+namespace ScfGroup\VoyagerConfig\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
-use MadeByBob\VoyagerConfig\Core\VoyagerExport;
+use ScfGroup\VoyagerConfig\Core\VoyagerExport;
 
 class VoyagerImportUpdateCommand extends Command
 {
