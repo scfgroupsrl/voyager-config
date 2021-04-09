@@ -1,21 +1,21 @@
 <?php
 
-namespace ScfGroup\VoyagerConfig\Console\Commands;
+
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\Artisan;
-use ScfGroup\VoyagerConfig\Core\VoyagerExport;
+use ScfGroup\VoyagerConfig\Core\Production;
 
-class VoyagerImportUpdateCommand extends Command
+class VoyagerProductionCommand extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'voyager:importupdate {--p|production : Import and make a clear after}';
+    protected $signature = 'voyager:production';
 
     /**
      * The console command description.
@@ -60,7 +60,7 @@ class VoyagerImportUpdateCommand extends Command
     {
         DB::beginTransaction();
 
-        $this->info("Starting Voyager config import ...");
+        $this->info("Starting Voyager config import in production ...");
 
         foreach ($this->tables as $table) {
 
@@ -93,7 +93,11 @@ class VoyagerImportUpdateCommand extends Command
 
         // Commit changes on DB. Errors will automatically reverted by uncommitted transaction
         DB::commit();
-        if($this->option('production')){ Artisan::call('voyager:clear');}
+
+
+        $this->info("Start the cleaning process...");
+        Artisan::call('voyager:clear');
+
         $this->info("Importing Voyager configuration successful!");
     }
 

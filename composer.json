@@ -17,7 +17,6 @@
             "email": "svilupposoftware@scfgroup.it"
         }
     ],
-    "minimum-stability": "alpha",
     "require": {},
     "autoload": {
         "psr-4": {
@@ -29,6 +28,9 @@
             "providers": [
                 "ScfGroup\\VoyagerConfig\\VoyagerConfigServiceProvider"
             ]
+        },
+        "branch-alias": {
+            "dev-master": "0.0.x-dev"
         }
     }
 }

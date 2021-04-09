@@ -4,6 +4,7 @@ namespace ScfGroup\VoyagerConfig\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Artisan;
 
 class VoyagerImportCommand extends Command
 {
@@ -78,7 +79,7 @@ class VoyagerImportCommand extends Command
 
         // Commit changes on DB. Errors will automatically reverted by uncommitted transaction
         DB::commit();
-        if(!$this->option('production')){ Artisan::call('voyager:clear');}
+        if($this->option('production')){ Artisan::call('voyager:clear');}
         $this->info("Importing Voyager configuration successful!");
     }
 
