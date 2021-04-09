@@ -5,8 +5,8 @@ namespace ScfGroup\VoyagerConfig\Console\Commands;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
-use Illuminate\Support\Facades\Artisan;
 use ScfGroup\VoyagerConfig\Core\Production;
+use ScfGroup\VoyagerConfig\Core\VoyagerExport;
 
 class VoyagerProductionCommand extends Command
 {
@@ -96,7 +96,7 @@ class VoyagerProductionCommand extends Command
 
 
         $this->info("Start the cleaning process...");
-        Artisan::call('voyager:clear');
+        VoyagerExport::clear();
 
         $this->info("Importing Voyager configuration successful!");
     }
